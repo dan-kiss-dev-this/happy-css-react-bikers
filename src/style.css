@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: teal;
+}
+
+.bike {
+  width: 800px;
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: 50px;
+  left: 350px;
+  background-color: #add8e6;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+}
+
+.spinningWheel{
+  position: absolute;
+  top: 220px;
+
+  height: 190px;
+  width: 190px;
+  background-color: transparent;
+  background-image: url('https://svgsilh.com/svg/1596876.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  animation: spinningWheel 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;  
+}
+
+.wheel1 {
+  top: 420px;
+  left: 250px;
+}
+
+.wheel2 {
+  top: 420px;
+  left: 510px;
+}
+
+
+
+@keyframes spinningWheel {
+  from {
+    transform: rotate(0deg);
+  }
+  
+  to {
+    transform:rotate(360deg)
+  }
+}

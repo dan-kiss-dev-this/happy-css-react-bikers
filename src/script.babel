@@ -1,0 +1,35 @@
+
+
+class Biker extends React.Component {
+  state={
+    distance: 0
+  }
+
+distanceBiked() {
+  setInterval(()=>{this.setState({ distance: this.state.distance + 1 });}, 1000)
+}
+  
+  componentDidMount() {
+    this.distanceBiked();
+  }
+
+  render() {
+    return (
+      <div className="bike">
+        <h1 className="header">We biked {this.state.distance} miles!</h1>
+        <img src="https://cdn.pixabay.com/photo/2016/10/06/05/19/engagement-1718244_960_720.jpg" />
+        <div className="spinningWheel wheel1" >
+        </div>
+        <div className="spinningWheel wheel2" >
+        </div>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Biker/>,
+  document.getElementById('root')
+);
+
+
